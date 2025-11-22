@@ -319,6 +319,10 @@ int main(int argc, char* argv[]){
                 nome_arquivo = realloc(nome_arquivo, strlen(&argv[i][2]) * sizeof(char));
                 strcpy(nome_arquivo, &argv[i][2]);
                 strcat(nome_arquivo, ".pbm");
+            }else{
+                printf("Erro: Há argumentos inválidos.");
+                printf("Digite %s --help para mais informações.\n", argv[0]);
+                exit(-1);
             }
         }
 
@@ -353,4 +357,5 @@ int main(int argc, char* argv[]){
             exit(0);
         }
     }
+
 }
