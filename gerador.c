@@ -262,14 +262,14 @@ int main(int argc, char* argv[]){
     FILE *codigo_barras;
 
     if(argc < 2){
-        printf(\n);
+        printf("\n");
         printf("Erro: Número insuficiente de argumentos.\n");
         printf("Digite %s --help para mais informações.\n", argv[0]);
-        printf(\n);
+        printf("\n");
         exit(-1);
     }else{
         if(strcmp(argv[1], "--help") == 0){
-            printf(\n);
+            printf("\n");
             printf("Uso: %s <código EAN-8> [opções]\n", argv[0]);
             printf("Gera um código de barras EAN-8 a partir do código fornecido.\n\n");
             printf("Argumentos:\n");
@@ -279,21 +279,21 @@ int main(int argc, char* argv[]){
             printf("  a:<valor>             Define a quantidade de pixels por área (padrão: 3).\n");
             printf("  h:<valor>             Define a altura do código de barras (padrão: 50).\n");
             printf("  n:<nome_arquivo>      Define o nome do arquivo de saída.\n");
-            printf(\n);
+            printf("\n");
             exit(0);
         }
 
         if(strlen(argv[1]) != 8){
-            printf(\n);
+            printf("\n");
             printf("Erro: Código inválido! O código EAN-8 precisa ter 8 dígitos.\n");
-            printf(\n);
+            printf("\n");
             exit(-1);
         }
         for(int i = 0; i < 8; i++){
             if(!isdigit(argv[1][i])){
-                printf(\n);
+                printf("\n");
                 printf("Erro: Código inválido! O código EAN-8 possui apenas dígitos numéricos.\n");
-                printf(\n);
+                printf("\n");
                 exit(-1);
             }
             codigo[i] = argv[1][i] - '0'; // Operação com o código do caractere na tabela ASCII
@@ -309,9 +309,9 @@ int main(int argc, char* argv[]){
         int digito_identificador = 10 - (soma_digito_identificador % 10);
         if(digito_identificador == 10) digito_identificador = 0;
         if(digito_identificador != codigo[7]){
-            printf(\n);
+            printf("\n");
             printf("Erro: Código inválido! Dígito verificador não corresnponde com os valores anteriores.\n");
-            printf(\n);
+            printf("\n");
             exit(-1);
         }
 
@@ -330,10 +330,10 @@ int main(int argc, char* argv[]){
                 strcpy(nome_arquivo, &argv[i][2]);
                 strcat(nome_arquivo, ".pbm");
             }else{
-                printf(\n);
+                printf("\n");
                 printf("Erro: Há argumentos inválidos.\n");
                 printf("Digite %s --help para mais informações.\n", argv[0]);
-                printf(\n);
+                printf("\n");
                 exit(-1);
             }
         }
@@ -341,43 +341,44 @@ int main(int argc, char* argv[]){
         codigo_barras = fopen(nome_arquivo, "r");
         if(codigo_barras != NULL){
             char opcao;
-            printf(\n);
+            printf("\n");
             printf("Aviso: O arquivo %s já existe.\n", nome_arquivo);
             printf("Deseja sobrescrevê-lo? (s/n): ");
             scanf(" %c", &opcao);
             if(opcao == 's' || opcao == 'S'){
                 fclose(codigo_barras);
                 gerador_codigo_barras(codigo_barras, codigo, espacamento, quat_pixel_area, altura_codigo, nome_arquivo);
-                printf(\n);
+                printf("\n");
                 printf("Arquivo %s sobrescrito com sucesso.\n", nome_arquivo);
-                printf(\n);
+                printf("\n");
                 free(nome_arquivo);
                 exit(0);
             }
             else if(opcao == 'n' || opcao == 'N'){
-                printf(\n);
+                printf("\n");
                 printf("Arquivo já existente.\n");
-                printf(\n);
+                printf("\n");
                 fclose(codigo_barras);
                 free(nome_arquivo);
                 exit(-1);
             }else{
-                printf(\n);
+                printf("\n");
                 printf("Erro: Opção inválida.\n");
-                printf(\n);
+                printf("\n");
                 fclose(codigo_barras);
                 free(nome_arquivo);
                 exit(-1);
             }
         }else{
             gerador_codigo_barras(codigo_barras, codigo, espacamento, quat_pixel_area, altura_codigo, nome_arquivo);
-            printf(\n);
+            printf("\n");
             printf("Arquivo %s criado com sucesso.\n", nome_arquivo);
-            printf(\n);
+            printf("\n");
             free(nome_arquivo);
             exit(0);
         }
     }
 
 }
+
 
