@@ -310,7 +310,7 @@ int main(int argc, char* argv[]){
         if(digito_identificador == 10) digito_identificador = 0;
         if(digito_identificador != codigo[7]){
             printf("\n");
-            printf("Erro: Código inválido! Dígito verificador não corresnponde com os valores anteriores.\n");
+            printf("Erro: Código inválido! Dígito verificador não corresponde com os valores anteriores.\n");
             printf("\n");
             exit(-1);
         }
@@ -356,7 +356,7 @@ int main(int argc, char* argv[]){
             }
             else if(opcao == 'n' || opcao == 'N'){
                 printf("\n");
-                printf("Arquivo já existente.\n");
+                printf("Falha na operação: Arquivo já existente.\n");
                 printf("\n");
                 fclose(codigo_barras);
                 free(nome_arquivo);
@@ -380,5 +380,6 @@ int main(int argc, char* argv[]){
     }
 
 }
+
 
 
