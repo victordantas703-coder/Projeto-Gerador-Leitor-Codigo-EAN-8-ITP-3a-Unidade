@@ -122,9 +122,8 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
     // Espaçamento acima do código
     for(int i = 0; i < espacamento; i++){
         for(int i = 0; i < largura_imagem; i++){
-            fprintf(codigo_barras, "0");
+            fprintf(codigo_barras, "0\n");
         }
-        fprintf(codigo_barras, "\n");
     }
     
     // Impressão do código de barras
@@ -132,13 +131,13 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         
         // Espaçamento da esquerdo
         for(int j = 0; j < espacamento; j++){
-            fprintf(codigo_barras, "0");
+            fprintf(codigo_barras, "0\n");
         }
         
         // Marcador de início
         for(int j = 0; j < 3; j++){
             for(int k = 0; k < quat_pixel_area; k++){
-                fprintf(codigo_barras, "%c", inicio_fim_codigo[j]);
+                fprintf(codigo_barras, "%c\n", inicio_fim_codigo[j]);
             }
         }
         
@@ -146,7 +145,7 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         for(int d = 0; d < 4; d++){
             for(int j = 0; j < 7; j++){
                 for(int k = 0; k < quat_pixel_area; k++){
-                    fprintf(codigo_barras, "%c", tabela_digitos_esquerda[codigo[d]][j]);
+                    fprintf(codigo_barras, "%c\n", tabela_digitos_esquerda[codigo[d]][j]);
                 }
             }
         }
@@ -154,7 +153,7 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         // Marcador central
         for(int j = 0; j < 5; j++){
             for(int k = 0; k < quat_pixel_area; k++){
-                fprintf(codigo_barras, "%c", separador_centro[j]);
+                fprintf(codigo_barras, "%c\n", separador_centro[j]);
             }
         }
         
@@ -162,7 +161,7 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         for(int d = 4; d < 8; d++){
             for(int j = 0; j < 7; j++){
                 for(int k = 0; k < quat_pixel_area; k++){
-                    fprintf(codigo_barras, "%c", tabela_digitos_direita[codigo[d]][j]);
+                    fprintf(codigo_barras, "%c\n", tabela_digitos_direita[codigo[d]][j]);
                 }
             }
         }
@@ -170,16 +169,14 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         // Marcador de fim
         for(int j = 0; j < 3; j++){
             for(int k = 0; k < quat_pixel_area; k++){
-                fprintf(codigo_barras, "%c", inicio_fim_codigo[j]);
+                fprintf(codigo_barras, "%c\n", inicio_fim_codigo[j]);
             }
         }
         
         // Espaçamento direito
         for(int j = 0; j < espacamento; j++){
-            fprintf(codigo_barras, "0");
+            fprintf(codigo_barras, "0\n");
         }
-
-        fprintf(codigo_barras, "\n");
     }
 
     // Impressão dos números abaixo do código de barras
@@ -189,13 +186,13 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         
         // Espaçamento da esquerdo
         for(int j = 0; j < espacamento; j++){
-            fprintf(codigo_barras, "0");
+            fprintf(codigo_barras, "0\n");
         }
 
         // Marcador de início
         for(int j = 0; j < 3; j++){
             for(int k = 0; k < quat_pixel_area; k++){
-                fprintf(codigo_barras, "%c", inicio_fim_codigo[j]);
+                fprintf(codigo_barras, "%c\n", inicio_fim_codigo[j]);
             }
         }
 
@@ -203,7 +200,7 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         for(int d = 0; d < 4; d++){
             for(int j = 0; j < 7; j++){
                 for(int k = 0; k < quat_pixel_area; k++){
-                    fprintf(codigo_barras, "%c", numeros_impressao[codigo[d]][camada_digito][j]);
+                    fprintf(codigo_barras, "%c\n", numeros_impressao[codigo[d]][camada_digito][j]);
                 }
             }
         }
@@ -211,7 +208,7 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         // Marcador central
         for(int j = 0; j < 5; j++){
             for(int k = 0; k < quat_pixel_area; k++){
-                fprintf(codigo_barras, "%c", separador_centro[j]);
+                fprintf(codigo_barras, "%c\n", separador_centro[j]);
             }
         }
 
@@ -219,7 +216,7 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         for(int d = 4; d < 8; d++){
             for(int j = 0; j < 7; j++){
                 for(int k = 0; k < quat_pixel_area; k++){
-                    fprintf(codigo_barras, "%c", numeros_impressao[codigo[d]][camada_digito][j]);
+                    fprintf(codigo_barras, "%c\n", numeros_impressao[codigo[d]][camada_digito][j]);
                 }
             }
         }
@@ -227,24 +224,21 @@ void gerador_codigo_barras(FILE *codigo_barras, int codigo[], int espacamento, i
         // Marcador de fim
         for(int j = 0; j < 3; j++){
             for(int k = 0; k < quat_pixel_area; k++){
-                fprintf(codigo_barras, "%c", inicio_fim_codigo[j]);
+                fprintf(codigo_barras, "%c\n", inicio_fim_codigo[j]);
             }
         }
 
         // Espaçamento direito
         for(int j = 0; j < espacamento; j++){
-            fprintf(codigo_barras, "0");
+            fprintf(codigo_barras, "0\n");
         }
-
-        fprintf(codigo_barras, "\n");
     }
 
     // Espaçamento abaixo do código
     for(int i = 0; i < espacamento; i++){
         for(int i = 0; i < largura_imagem; i++){
-            fprintf(codigo_barras, "0");
+            fprintf(codigo_barras, "0\n");
         }
-        fprintf(codigo_barras, "\n");
     }
 }
 
@@ -380,6 +374,7 @@ int main(int argc, char* argv[]){
     }
 
 }
+
 
 
 
