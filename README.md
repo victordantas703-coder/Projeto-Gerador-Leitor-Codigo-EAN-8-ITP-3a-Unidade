@@ -14,17 +14,17 @@ Projeto de gerador e leitor de códigos de barras padrão EAN-8 para a matéria 
 
 Argumentos:
   
-  `<código EAN-8>`        Código numérico de 8 dígitos para gerar o código de barras.
+ - `<código EAN-8>`        Código numérico de 8 dígitos para gerar o código de barras.
 
 Opções:
   
-  `e:<valor>`             Define o espaçamento da imagem (padrão: 4)
+ - `e:<valor>`             Define o espaçamento da imagem (padrão: 4)
   
-  `a:<valor>`             Define a quantidade de pixels por área (padrão: 3)
+ - `a:<valor>`             Define a quantidade de pixels por área (padrão: 3)
   
-  `h:<valor>`             Define a altura do código de barras (padrão: 50)
+ - `h:<valor>`             Define a altura do código de barras (padrão: 50)
   
-  `n:<nome_arquivo>`      Define o nome do arquivo de saída
+ - `n:<nome_arquivo>`      Define o nome do arquivo de saída
 
 
 ## Uso do leitor de código EAN-8:
