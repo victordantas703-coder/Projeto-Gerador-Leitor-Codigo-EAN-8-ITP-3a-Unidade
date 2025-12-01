@@ -5,7 +5,7 @@ Projeto de gerador e leitor de códigos de barras padrão EAN-8 para a matéria 
 
 - [Uso do gerador de código de barras EAN-8](#uso-do-gerador-de-código-de-barras-EAN-8)
 - [Uso do leitor de código de barras EAN-8](#uso-do-leitor-de-código-de-barras-EAN-8)
-- [Integrantes/Colaboradores](#integrantes/colaboradores)
+- [Integrantes/Colaboradores](#integrantescolaboradores)
 
 ## Uso do gerador de código de barras EAN-8:
 
