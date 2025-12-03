@@ -260,6 +260,7 @@ int main(int argc, char* argv[]){
         printf("Erro: Número insuficiente de argumentos.\n");
         printf("Digite %s --help para mais informações.\n", argv[0]);
         printf("\n");
+        free(nome_arquivo);
         exit(-1);
     }else{
         if(strcmp(argv[1], "--help") == 0){
@@ -274,6 +275,7 @@ int main(int argc, char* argv[]){
             printf("  h:<valor>             Define a altura do código de barras (padrão: 50).\n");
             printf("  n:<nome_arquivo>      Define o nome do arquivo de saída.\n");
             printf("\n");
+            free(nome_arquivo);
             exit(0);
         }
 
@@ -281,6 +283,7 @@ int main(int argc, char* argv[]){
             printf("\n");
             printf("Erro: Código inválido! O código EAN-8 precisa ter 8 dígitos.\n");
             printf("\n");
+            free(nome_arquivo);
             exit(-1);
         }
         for(int i = 0; i < 8; i++){
@@ -288,6 +291,7 @@ int main(int argc, char* argv[]){
                 printf("\n");
                 printf("Erro: Código inválido! O código EAN-8 possui apenas dígitos numéricos.\n");
                 printf("\n");
+                free(nome_arquivo);
                 exit(-1);
             }
             codigo[i] = argv[1][i] - '0'; // Operação com o código do caractere na tabela ASCII
@@ -306,6 +310,7 @@ int main(int argc, char* argv[]){
             printf("\n");
             printf("Erro: Código inválido! Dígito verificador não corresponde com os valores anteriores.\n");
             printf("\n");
+            free(nome_arquivo);
             exit(-1);
         }
 
@@ -328,6 +333,7 @@ int main(int argc, char* argv[]){
                 printf("Erro: Há argumentos inválidos.\n");
                 printf("Digite %s --help para mais informações.\n", argv[0]);
                 printf("\n");
+                free(nome_arquivo);
                 exit(-1);
             }
         }
@@ -374,6 +380,7 @@ int main(int argc, char* argv[]){
     }
 
 }
+
 
 
 
