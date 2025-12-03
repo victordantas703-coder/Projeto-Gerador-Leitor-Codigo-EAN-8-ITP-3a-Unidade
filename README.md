@@ -37,9 +37,9 @@ Opções:
 
 1. Certifique-se que o comando `gcc` está presente no seu sistema operacional;
 
-2. No terminal, acesse a pasta onde os arquivos `leitor_1.c` e `definitions.h` estão localizados;
+2. No terminal, acesse a pasta onde os arquivos `leitor.c` e `definitions.h` estão localizados;
 
-3. Execute o seguinte comando: `gcc leitor_1.c -o <nome_do_executável>`;
+3. Execute o seguinte comando: `gcc leitor.c -o <nome_do_executável>`;
 
 4. Por fim, execute o novo arquivo criado com `<./<nome_do_executável> <nome_do_arquivo_pbm>`.
 
