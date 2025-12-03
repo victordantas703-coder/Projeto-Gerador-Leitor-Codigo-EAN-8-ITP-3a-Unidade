@@ -29,7 +29,7 @@ ou baixe o arquivo compactado do projeto [por aqui](https://github.com/victordan
 
 4. Execute o seguinte comando: `gcc gerador.c -o <nome_do_executável>`;
 
-5. Por fim, execute o novo arquivo criado com `<./<nome_do_executável> <código EAN-8> [opções]`.
+5. Por fim, crie um código de barras EAN-8 executando o novo arquivo criado com `<./<nome_do_executável> <código EAN-8> [opções]`.
             
 
 Argumentos:
@@ -62,7 +62,7 @@ ou baixe o arquivo compactado do projeto [por aqui](https://github.com/victordan
 
 4. Execute o seguinte comando: `gcc leitor.c -o <nome_do_executável>`;
 
-5. Por fim, execute o novo arquivo criado com `<./<nome_do_executável> <nome_do_arquivo_pbm>`.
+5. Por fim, leia um código de barras EAN-8 executando o novo arquivo criado com `<./<nome_do_executável> <nome_do_arquivo_pbm>`.
 
 Argumentos:
   
