@@ -1,19 +1,29 @@
 # Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade
-Projeto de gerador e leitor de códigos de barras padrão EAN-8 para a matéria de Introdução às Técnicas de Programação do curso de BTI/UFRN
+![Git Hub](https://img.shields.io/badge/github-repository-blue?logo=github)
+![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)
+![ITP-UFRN](https://img.shields.io/badge/ITP-UFRN-blue.svg)
 
 ## Sumário
 
+- [Introdução](#introdução)
 - [Uso do gerador de código de barras EAN-8](#uso-do-gerador-de-código-de-barras-EAN-8)
 - [Uso do leitor de código de barras EAN-8](#uso-do-leitor-de-código-de-barras-EAN-8)
 - [Integrantes/Colaboradores](#integrantescolaboradores)
+
+## Introdução
+
+Projeto de gerador e leitor de códigos de barras padrão EAN-8 para a matéria de Introdução às Técnicas de Programação do curso de BTI/UFRN.
 
 ## Uso do gerador de código de barras EAN-8:
 
 1. Certifique-se que o comando `gcc` está presente no seu sistema operacional;
 
-2. Caso tenha o comando `git` instalado no seu sistema operacional, execute o
-comando `git clone https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade.git` no seu terminal, ou baixe o arquivo compactado do
-projeto [por aqui](https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade/archive/refs/heads/main.zip) e extraia a pasta contida nele;
+2. Caso tenha o comando `git` instalado no seu sistema operacional, copie e execute o seguinte comando no seu terminal:
+``` bash
+git clone https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade.git
+```
+
+ou baixe o arquivo compactado do projeto [por aqui](https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade/archive/refs/heads/main.zip) e extraia a pasta contida nele;
 
 3. No terminal, acesse a pasta onde os arquivos `gerador.c` e `definitions.h` estão localizados usando o comando `cd`;
 
@@ -41,9 +51,12 @@ Opções:
 
 1. Certifique-se que o comando `gcc` está presente no seu sistema operacional;
 
-2. Caso tenha o comando `git` instalado no seu sistema operacional, execute o
-comando `git clone https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade.git` no seu terminal, ou baixe o arquivo compactado do
-projeto [por aqui](https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade/archive/refs/heads/main.zip) e extraia a pasta contida nele;
+2. Caso tenha o comando `git` instalado no seu sistema operacional, copie e execute o seguinte comando no seu terminal:
+``` bash
+git clone https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade.git
+```
+
+ou baixe o arquivo compactado do projeto [por aqui](https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade/archive/refs/heads/main.zip) e extraia a pasta contida nele;
 
 3. No terminal, acesse a pasta onde os arquivos `leitor.c` e `definitions.h` estão localizados usando o comando `cd`;
 
