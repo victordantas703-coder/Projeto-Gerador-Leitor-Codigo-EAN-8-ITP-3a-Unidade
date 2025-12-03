@@ -11,11 +11,15 @@ Projeto de gerador e leitor de códigos de barras padrão EAN-8 para a matéria 
 
 1. Certifique-se que o comando `gcc` está presente no seu sistema operacional;
 
-2. No terminal, acesse a pasta onde o arquivo gerador.c está localizado;
+2. Caso tenha o comando `git` instalado no seu sistema operacional, execute o
+comando `git clone https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade.git` no seu terminal, ou baixe o arquivo compactado do
+projeto [por aqui](https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade/archive/refs/heads/main.zip) e extraia a pasta contida nele;
 
-3. Execute o seguinte comando: `gcc gerador.c -o <nome_do_executável>`;
+3. No terminal, acesse a pasta onde os arquivos `gerador.c` e `definitions.h` estão localizados usando o comando `cd`;
 
-4. Por fim, execute o novo arquivo criado com `<./<nome_do_executável> <código EAN-8> [opções]`.
+4. Execute o seguinte comando: `gcc gerador.c -o <nome_do_executável>`;
+
+5. Por fim, execute o novo arquivo criado com `<./<nome_do_executável> <código EAN-8> [opções]`.
             
 
 Argumentos:
@@ -37,11 +41,15 @@ Opções:
 
 1. Certifique-se que o comando `gcc` está presente no seu sistema operacional;
 
-2. No terminal, acesse a pasta onde os arquivos `leitor.c` e `definitions.h` estão localizados;
+2. Caso tenha o comando `git` instalado no seu sistema operacional, execute o
+comando `git clone https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade.git` no seu terminal, ou baixe o arquivo compactado do
+projeto [por aqui](https://github.com/victordantas703-coder/Projeto-Gerador-Leitor-Codigo-EAN-8-ITP-3a-Unidade/archive/refs/heads/main.zip) e extraia a pasta contida nele;
 
-3. Execute o seguinte comando: `gcc leitor.c -o <nome_do_executável>`;
+3. No terminal, acesse a pasta onde os arquivos `leitor.c` e `definitions.h` estão localizados usando o comando `cd`;
 
-4. Por fim, execute o novo arquivo criado com `<./<nome_do_executável> <nome_do_arquivo_pbm>`.
+4. Execute o seguinte comando: `gcc leitor.c -o <nome_do_executável>`;
+
+5. Por fim, execute o novo arquivo criado com `<./<nome_do_executável> <nome_do_arquivo_pbm>`.
 
 Argumentos:
   
