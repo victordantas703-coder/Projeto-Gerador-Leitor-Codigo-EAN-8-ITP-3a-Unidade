@@ -9,7 +9,7 @@ void extrair_codigo (char *nome) {
     FILE *arquivo = fopen(nome, "rb");
     if (arquivo == NULL) {  // Verificar se o arquivo foi aberto com sucesso //
         perror("Erro ao abrir o arquivo");
-        exit(-1);
+        return;
     }
 
     // Elementos do cabeçalho //
@@ -21,7 +21,7 @@ void extrair_codigo (char *nome) {
     if (strcmp(formato, "P1") != 0) { // Verificar se é PBM (P1) //
         printf("Arquivo não é do formato PBM (P1)\n");
         fclose(arquivo);
-        exit(-1);
+        return;
     }
 
     fscanf(arquivo, "%d %d\n", &largura, &altura);  // Ler largura e altura //
@@ -86,7 +86,7 @@ void extrair_codigo (char *nome) {
             }
             free(pixels);
             free(codigo_barras);
-            exit(-1);
+            return;
         }
     }
     codigo_barras[67] = '\0';
@@ -101,7 +101,7 @@ void extrair_codigo (char *nome) {
         }
         free(pixels);
         free(codigo_barras);
-        exit(-1);
+        return;
     }
 
     // Verificar se o código de barras tem o tamanho correto //
@@ -112,7 +112,7 @@ void extrair_codigo (char *nome) {
         }
         free(pixels);
         free(codigo_barras);
-        exit(-1);
+        return;
     }
 
     // Alocar memoria para identificador do código de barras //
@@ -167,7 +167,7 @@ void extrair_codigo (char *nome) {
         free(pixels);
         free(codigo_barras);
         free(identificador);
-        exit(-1);
+        return;
     }
 
     // Exibir identificador do código de barras //
