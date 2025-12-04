@@ -92,9 +92,9 @@ void extrair_codigo (char *nome) {
     codigo_barras[67] = '\0';
 
     // Verificar se o código de barras possui os marcadores corretos //
-    if (strncmp(codigo_barras, "101", 3) != 0 || // Verificar marcador de início //
-        strncmp(codigo_barras + 31, "01010", 5) != 0 || // Verificar marcador central //
-        strncmp(codigo_barras + 64, "101", 3) != 0) { // Verificar marcador de fim //
+    if (strncmp(codigo_barras, inicio_fim_codigo, 3) != 0 || // Verificar marcador de início //
+        strncmp(codigo_barras + 31, separador_centro, 5) != 0 || // Verificar marcador central //
+        strncmp(codigo_barras + 64, inicio_fim_codigo, 3) != 0) { // Verificar marcador de fim //
         printf("Não há um código de barras ou o código de barras é inválido\n");
         for (int i = 0; i < altura; i++) {
             free(pixels[i]);
