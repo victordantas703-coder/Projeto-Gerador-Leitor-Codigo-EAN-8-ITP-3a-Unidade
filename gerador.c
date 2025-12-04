@@ -271,7 +271,7 @@ int main(int argc, char* argv[]){
             printf("  <código EAN-8>        Código numérico de 8 dígitos para gerar o código de barras.\n\n");
             printf("Opções:\n");
             printf("  e:<valor>             Define o espaçamento da imagem (padrão: 4).\n");
-            printf("  a:<valor>             Define a quantidade de pixels por área (padrão: 3).\n");
+            printf("  a:<valor>             Define a quantidade de pixels por área do código (padrão: 3).\n");
             printf("  h:<valor>             Define a altura do código de barras (padrão: 50).\n");
             printf("  n:<nome_arquivo>      Define o nome do arquivo de saída.\n");
             printf("\n");
@@ -317,15 +317,36 @@ int main(int argc, char* argv[]){
         for(int i = 2; i < argc; i++){
             if(argv[i][0] == 'e' && argv[i][1] == ':'){
                 espacamento = atoi(&argv[i][2]);
+                if(espacamento < 0){
+                    printf("\n");
+                    printf("Erro: Espaçamento negativo! O espaçamento deve ser um inteiro maior ou igual a 0.\n");
+                    printf("\n");
+                    free(nome_arquivo);
+                    exit(-1);
+                }
             }
             else if(argv[i][0] == 'a' && argv[i][1] == ':'){
                 quat_pixel_area = atoi(&argv[i][2]);
+                if(quat_pixel_area < 1){
+                    printf("\n");
+                    printf("Erro: Quantidade de pixels por área do código inválida! A quantidade de pixels por área do código deve ser um inteiro maior ou igual a 1.\n");
+                    printf("\n");
+                    free(nome_arquivo);
+                    exit(-1);
+                }
             }
             else if(argv[i][0] == 'h' && argv[i][1] == ':'){
                 altura_codigo = atoi(&argv[i][2]);
+                if(altura_codigo < 1){
+                    printf("\n");
+                    printf("Erro: Altura do código inválida! A altura do código deve ser um inteiro maior ou igual a 1.\n");
+                    printf("\n");
+                    free(nome_arquivo);
+                    exit(-1);
+                }
             }
             else if(argv[i][0] == 'n' && argv[i][1] == ':'){
-                nome_arquivo = realloc(nome_arquivo, strlen(&argv[i][2]) * sizeof(char));
+                nome_arquivo = realloc(nome_arquivo, (strlen(&argv[i][2]) + 4) * sizeof(char));
                 strcpy(nome_arquivo, &argv[i][2]);
                 strcat(nome_arquivo, ".pbm");
             }else{
@@ -380,6 +401,7 @@ int main(int argc, char* argv[]){
     }
 
 }
+
 
 
 
